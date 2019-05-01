@@ -1,0 +1,41 @@
+body {
+    background-image: url("../img/background.png");
+    margin-top: 3%;
+    text-align: center; 
+    font-family: sans-serif;
+}
+
+#text-enter-button {
+    margin-top: 2%;
+}
+
+.burgerName {
+    float: left;
+    clear: left;
+}
+
+.fas {
+    float: right;
+    margin: 4% 4% 0 0;
+}
+
+#enter_text {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.col-4 {
+    text-align: center;
+}
+
+.container {
+    opacity: .8;
+}
+
+#burgerImg {
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    height: 200px;
+    left: 38%;
+}
