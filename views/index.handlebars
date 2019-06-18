@@ -2,11 +2,23 @@
     <h1 class="text-center">Denise's Burger App</h1>
 </div>
 
-<div class="row">
-    <div class="col-md-1"></div>
-    <div id="burgerDiv" class="col-md-4"></div>
-    <div class="col-md-2">t</div>
-    <div id="eatenBurgerDiv"></div>
-    <div class="col-md-1"></div>
+{{log "Burger Data: " burger_data}}
 
+<div class="row">
+    {{#each burger_data}}
+        <div class="col-md-1"></div>
+
+        <div id="burgerDiv" class="col-md-4 border">
+
+            {{#unless this.devoured}}
+                <h3 class="float-left"> {{this.id}}. {{this.burger_name}} </h3><button class="float-right">Devour</button>
+            {{/unless}}
+
+        </div>
+
+        <div class="col-md-2"></div>
+
+        <div id="eatenBurgerDiv" class="col-md-4 border"></div>
+        <div class="col-md-1"></div>
+    {{/each}}
 </div>
