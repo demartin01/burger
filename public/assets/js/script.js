@@ -1,7 +1,7 @@
 
 
-$(document).on("click", "#text-enter-button", function () {
-    let newBurger = { burger_name: $("#enter_text").val().trim()};
+$(document).on("click", "#addBurger", function () {
+    let newBurger = { burger_name: $("#newBurger").val().trim()};
   
     $.ajax({
       url: "/burgers/create",
@@ -11,11 +11,19 @@ $(document).on("click", "#text-enter-button", function () {
     .then(()=>location.reload())
   })
   
-  $(document).on("click", ".fa-trash", function () {
-    let id = $(this).attr("id");
+$(document).on("click", ".devour", function () {
+
+    $.ajax({
+      url: "/burgers/" + this.id,
+      method: "PUT"
+    })
+    .then(()=>location.reload())
+  })
+  
+  $(document).on("click", ".delBurger", function () {
   
     $.ajax({
-      url: "/burgers/" + id,
+      url: "/burgers/" + this.id,
       method: "DELETE"
     })
     .then(()=>location.reload())

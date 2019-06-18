@@ -1,4 +1,7 @@
 body {
+    background-image: url(/assets/images/burger1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-top: 3%;
     text-align: center; 
     font-family: sans-serif;
@@ -6,6 +9,12 @@ body {
 
 #text-enter-button {
     margin-top: 2%;
+}
+
+.input-group {
+    width: 40%;
+    margin: 10px auto 0 auto;
+    margin-top: 3%;
 }
 
 .burgerName {
@@ -37,4 +46,24 @@ body {
     width: 250px;
     height: 200px;
     left: 38%;
+}
+
+.jumbotron {
+    padding-bottom: 3%;
+    background-color: lightslategray;
+    opacity: .8;
+}
+
+#burgerDiv {
+    background-color:rgba(0,123,255,.5);
+    color: white;
+    padding: 2%;
+    box-shadow: 5px 5px 5px black;
+}
+
+#eatenBurgerDiv {
+    background-color: gray;
+    color: white;
+    padding: 1%;
+    box-shadow: 5px 5px 5px black;
 }

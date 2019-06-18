@@ -1,5 +1,12 @@
 <div class="jumbotron">
     <h1 class="text-center">Denise's Burger App</h1>
+    <div class="input-group">
+  <input type="text" id="newBurger" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+  <div class="input-group-append">
+    <button id="addBurger" class="btn btn-success" type="button">Add Burger</button>
+  </div>
+</div>
+
 </div>
 
 {{log "Burger Data: " burger_data}}
@@ -11,14 +18,20 @@
         <div id="burgerDiv" class="col-md-4 border">
 
             {{#unless this.devoured}}
-                <h3 class="float-left"> {{this.id}}. {{this.burger_name}} </h3><button class="float-right">Devour</button>
+                <h5 class="float-left"> {{this.burger_name}} </h5><button class="float-right devour" id="{{this.id}}">Devour</button>
             {{/unless}}
 
         </div>
 
         <div class="col-md-2"></div>
 
-        <div id="eatenBurgerDiv" class="col-md-4 border"></div>
+        <div id="eatenBurgerDiv" class="col-md-4 border">
+
+            {{#if this.devoured}}
+                <h5 class="float-left"> {{this.burger_name}} </h5><button class="float-right delBurger" id="{{this.id}}">Delete</button>
+            {{/if}}
+
+        </div>
         <div class="col-md-1"></div>
     {{/each}}
 </div>
